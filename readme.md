@@ -1,5 +1,5 @@
 # Neighborhood Map
-Build an application using Google map API displays coffee shops Riyadh, Saudi Arabia with add additional functionality to this application.
+Build an application using Google map API displays coffee shops in Riyadh, Saudi Arabia with add additional functionality to this application.
 
 ### Liberary & Frameworks Using
 * [jQuery](https://jquery.com/)
