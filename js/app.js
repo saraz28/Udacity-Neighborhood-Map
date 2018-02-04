@@ -111,11 +111,11 @@ function initMap() {
             dataType: "jsonp",
             success: function(response) {
                 var articleList = response[3][0];
-                //check if infowindow not opened 
+                //Check to make sure the infowindow is not already opened on this marker
                 if (infowindow.marker != marker) {
                     infowindow.marker = marker;
                     infowindow.open(map, marker);
-                    //click event for closing infowindow 
+                    //make sure the marker property is cleared if the infowindow is closed
                     infowindow.addListener('closeclick', function() {
                         infowindow.setMarker = null;
                     });
