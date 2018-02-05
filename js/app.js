@@ -145,13 +145,13 @@ function initMap() {
             //handling API error
             .fail(function() {
                 alert('failed to load wikipedia page');
-            })
+            });
 
     }
 }
 
 function handlingError() {
-    alert("failed to load the map Please check your connection")
+    alert("failed to load the map Please check your connection");
 }
 
 //this function to show markers when the search box is empty
