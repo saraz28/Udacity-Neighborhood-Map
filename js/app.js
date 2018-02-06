@@ -84,6 +84,10 @@ function initMap() {
         //a click event to open an infowindow at each marker.
         marker.addListener('click', function() {
             populateInfoWindow(this, largeInfowindow);
+              marker.setAnimation(google.maps.Animation.BOUNCE);
+            setTimeout(function() {
+                marker.setAnimation(null);
+            }, 1400);
 
         });
         //mouse over on  markers to change the it's colors 
@@ -94,13 +98,7 @@ function initMap() {
         marker.addListener('mouseout', function() {
             this.setIcon(defaultIcon);
         });
-        //Bounce markers when clicked
-        google.maps.event.addListener(marker, 'click', function() {
-            marker.setAnimation(google.maps.Animation.BOUNCE);
-            setTimeout(function() {
-                marker.setAnimation(null);
-            }, 1400);
-        });
+    
 
     }
 
@@ -166,7 +164,7 @@ function showMarkers() {
 }
 
 
-function viewModel() {
+function ViewModel() {
     var self = this;
     // Iterating over an location array
     self.location = ko.observableArray(locations);
@@ -203,4 +201,4 @@ function viewModel() {
 }
 
 
-ko.applyBindings(new viewModel());
+ko.applyBindings(new ViewModel());
