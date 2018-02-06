@@ -144,7 +144,9 @@ function initMap() {
             })
             //handling API error
             .fail(function() {
-                alert('failed to load wikipedia page');
+                infowindow.marker = marker;
+                infowindow.open(map, marker);
+                infowindow.setContent('<div>' + marker.title + '</div><hr>' + '<div>failed to open wikipedia page</div>');
             });
 
     }
